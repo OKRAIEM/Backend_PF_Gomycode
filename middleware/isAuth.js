@@ -11,7 +11,7 @@ const isAuth = async (req, res, next) => {
       res.status(400).send({ msg: 'not authorized!' })
     } else {
       const decoded = jwt.verify(token, process.env.SEKRET_KEY) 
-      console.log(decoded)
+      //console.log(decoded)
       const foundUser = await user.findOne({ _id: decoded._id })
 
       if (!foundUser) {

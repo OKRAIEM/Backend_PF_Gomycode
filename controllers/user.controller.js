@@ -15,7 +15,7 @@ exports.register = async (req, res) => {
 
         // Crée un nouvel utilisateur avec les données reçues
         const newUser = new user(req.body);
-        console.log(req.body);
+        // console.log(req.body);
         // Hachage du mot de passe
         const saltRounds = 10;
         const hashedPassword = await bcrypt.hash(password, saltRounds);

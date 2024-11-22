@@ -20,7 +20,7 @@ module.exports=router  */
 const express = require("express");   
 const { register, login, deleteUser, resetPassword, getAllUsers, updateUser } = require("../controllers/user.controller");
 const  isAuth  = require("../middleware/isAuth"); // Middleware d'authentification
-const { registerValidations, validator } = require("../Middleware/Validator");
+const { registerValidations, validator } = require("../middleware/validator");
 
 // Importez les middlewares de rôle
 
